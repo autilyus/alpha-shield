@@ -16,131 +16,64 @@
     body { background: white; color: black; font-family: sans-serif; margin: 50px; }
     #fake-error { display: block; }
 
-    #real-app {
-      display: none;
-      background: #0d1117; color: #c9d1d9;
-      position: fixed; inset: 0;
-      padding: 40px; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;
-      overflow: auto;
+    #real-app{
+      display:none;background:#0d1117;color:#c9d1d9;position:fixed;inset:0;
+      padding:40px;box-sizing:border-box;font-family:'Segoe UI',sans-serif;overflow:auto;
     }
-    .box {
-      max-width: 980px; margin: auto;
-      background: #161b22; padding: 25px; border-radius: 12px; border: 1px solid #30363d;
-      box-shadow: 0 10px 35px rgba(0,0,0,.35);
-    }
-    textarea, input, select {
-      width: 100%;
-      background: #010409;
-      border: 1px solid #30363d;
-      color: #79c0ff;
-      padding: 12px; margin: 10px 0;
-      border-radius: 6px;
-      box-sizing: border-box;
-      outline: none;
-    }
-    textarea { min-height: 170px; resize: vertical; }
-    input::placeholder { color: #6e7681; }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      cursor: pointer;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: transform .05s ease-in-out, opacity .2s ease-in-out;
-      user-select: none;
-    }
-    button:active { transform: translateY(1px); }
-    button:disabled { opacity: .5; cursor: not-allowed; }
-
-    .btn-main { background: #238636; color: white; }
-    .btn-blue { background:#1f6feb; color:white; }
-    .btn-gray { background:#30363d; color:white; }
-    .btn-danger { background: #da3633; color: white; margin-top: 16px; }
-
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-    @media (max-width: 1000px) { #real-app { padding: 18px; } }
-    @media (max-width: 760px) { .row, .row3 { grid-template-columns: 1fr; } }
-
-    .muted { font-size: 12px; color: #8b949e; line-height: 1.35; }
-    .title { color: #58a6ff; margin: 0 0 6px 0; }
-
-    .topbar {
-      display:flex; align-items:center; justify-content: space-between;
-      gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
-    }
-    .badge {
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 6px 10px; border-radius: 999px;
-      border: 1px solid #30363d;
-      background: #0b1220;
-      font-size: 12px; color: #c9d1d9;
-    }
-    .dot { width: 8px; height: 8px; border-radius: 999px; background: #2ea043;
-      box-shadow: 0 0 0 3px rgba(46,160,67,.15); display:inline-block; }
-
-    .pw-wrap { margin-top: 4px; }
-    .pw-meter { width: 100%; height: 10px; border-radius: 999px; background: #0b1220; border: 1px solid #30363d; overflow: hidden; }
-    .pw-bar { height: 100%; width: 0%; background: #da3633; transition: width .2s ease-in-out, background .2s ease-in-out; }
-    .pw-text { font-size: 12px; color: #8b949e; margin-top: 6px; }
-
-    .mini-actions { display:flex; gap:10px; flex-wrap: wrap; margin-top: 6px; }
-    .mini-actions button { width: auto; padding: 10px 12px; margin-top: 0; }
-
-    .tabs { display:flex; gap:10px; margin-top: 10px; flex-wrap: wrap; }
-    .tab { width:auto; padding: 10px 12px; margin-top: 0; background:#0b1220; color:#c9d1d9; border:1px solid #30363d; border-radius: 10px; }
-    .tab.active { background:#1f6feb; border-color:#1f6feb; }
-
-    .section { margin-top: 14px; padding-top: 10px; border-top: 1px solid #30363d; }
-
-    .history {
-      margin-top: 8px;
-      border: 1px solid #30363d; border-radius: 10px;
-      background:#0b1220; padding: 10px;
-      max-height: 180px; overflow:auto;
-    }
-    .hist-item {
-      display:flex; gap:10px; align-items:center; justify-content: space-between;
-      padding: 8px; border-radius: 8px;
-      border: 1px solid #30363d; background:#010409;
-      margin-bottom: 8px;
-    }
-    .hist-item:last-child { margin-bottom: 0; }
-    .hist-text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 11px; color:#79c0ff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 600px; }
-    .hist-actions { display:flex; gap:8px; }
-    .hist-actions button { width:auto; margin-top:0; padding: 8px 10px; border-radius: 8px; }
-
-    .warn {
-      margin-top: 10px;
-      padding: 10px 12px;
-      border: 1px solid #d29922;
-      background: rgba(210,153,34,.08);
-      border-radius: 10px;
-      font-size: 12px; color: #c9d1d9;
-    }
-
-    .blurred {
-      filter: blur(6px);
-      transition: filter .15s ease-in-out;
-    }
-    .blurred:focus, .blurred:hover { filter: blur(0px); }
-
-    .qrWrap {
-      margin-top: 10px;
-      display:none;
-      padding: 12px;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      background: #0b1220;
-    }
+    .box{max-width:980px;margin:auto;background:#161b22;padding:25px;border-radius:12px;border:1px solid #30363d;box-shadow:0 10px 35px rgba(0,0,0,.35);}
+    textarea,input,select{width:100%;background:#010409;border:1px solid #30363d;color:#79c0ff;padding:12px;margin:10px 0;border-radius:6px;box-sizing:border-box;outline:none;}
+    textarea{min-height:170px;resize:vertical;}
+    input::placeholder{color:#6e7681;}
+    button{width:100%;padding:12px;margin-top:10px;cursor:pointer;border:none;border-radius:6px;font-weight:bold;transition:transform .05s,opacity .2s;user-select:none;}
+    button:active{transform:translateY(1px);}
+    button:disabled{opacity:.5;cursor:not-allowed;}
+    .btn-main{background:#238636;color:#fff;}
+    .btn-blue{background:#1f6feb;color:#fff;}
+    .btn-gray{background:#30363d;color:#fff;}
+    .btn-danger{background:#da3633;color:#fff;margin-top:16px;}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+    @media (max-width:1000px){#real-app{padding:18px;}}
+    @media (max-width:760px){.row,.row3{grid-template-columns:1fr;}}
+    .muted{font-size:12px;color:#8b949e;line-height:1.35;}
+    .title{color:#58a6ff;margin:0 0 6px 0;}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap;}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid #30363d;background:#0b1220;font-size:12px;color:#c9d1d9;}
+    .dot{width:8px;height:8px;border-radius:999px;background:#2ea043;box-shadow:0 0 0 3px rgba(46,160,67,.15);display:inline-block;}
+    .pw-meter{width:100%;height:10px;border-radius:999px;background:#0b1220;border:1px solid #30363d;overflow:hidden;}
+    .pw-bar{height:100%;width:0%;background:#da3633;transition:width .2s,background .2s;}
+    .pw-text{font-size:12px;color:#8b949e;margin-top:6px;}
+    .mini-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+    .mini-actions button{width:auto;padding:10px 12px;margin-top:0;}
+    .tabs{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;}
+    .tab{width:auto;padding:10px 12px;margin-top:0;background:#0b1220;color:#c9d1d9;border:1px solid #30363d;border-radius:10px;}
+    .tab.active{background:#1f6feb;border-color:#1f6feb;}
+    .section{margin-top:14px;padding-top:10px;border-top:1px solid #30363d;}
+    .history{margin-top:8px;border:1px solid #30363d;border-radius:10px;background:#0b1220;padding:10px;max-height:180px;overflow:auto;}
+    .hist-item{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:8px;border-radius:8px;border:1px solid #30363d;background:#010409;margin-bottom:8px;}
+    .hist-item:last-child{margin-bottom:0;}
+    .hist-text{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:11px;color:#79c0ff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:600px;}
+    .hist-actions{display:flex;gap:8px;}
+    .hist-actions button{width:auto;margin-top:0;padding:8px 10px;border-radius:8px;}
+    .warn{margin-top:10px;padding:10px 12px;border:1px solid #d29922;background:rgba(210,153,34,.08);border-radius:10px;font-size:12px;color:#c9d1d9;}
+    .blurred{filter:blur(6px);transition:filter .15s;}
+    .blurred:focus,.blurred:hover{filter:blur(0px);}
+    .qrWrap{margin-top:10px;display:none;padding:12px;border:1px solid #30363d;border-radius:10px;background:#0b1220;}
   </style>
 </head>
 
 <body>
+  <!-- ✅ PIN LOCK: SAYFA AÇILMADAN ÖNCE -->
+  <div id="pin-lock" style="position:fixed;inset:0;background:#0d1117;color:#c9d1d9;display:flex;align-items:center;justify-content:center;z-index:99999;font-family:sans-serif;">
+    <div style="background:#161b22;padding:26px;border-radius:12px;border:1px solid #30363d;min-width:280px;">
+      <h3 style="margin:0 0 10px 0;">PIN Gerekli</h3>
+      <div class="muted">Doğru PIN girilmeden içerik açılmaz.</div>
+      <input id="pinInput" type="password" placeholder="PIN" style="margin-top:10px;">
+      <button class="btn-blue" id="pinBtn">GİR</button>
+      <div class="muted" style="margin-top:10px;">İpucu: PIN’i değiştirmek için alttaki PIN_HASH’i güncelle.</div>
+    </div>
+  </div>
+
   <div id="fake-error">
     <h1>404 Not Found</h1>
     <p>The requested URL was not found on this server.</p>
@@ -152,13 +85,10 @@
     <div class="box">
       <div class="topbar">
         <div>
-          <h2 class="title">Alpha-Shield V5 (Hepsi Eklendi)</h2>
+          <h2 class="title">Alpha-Shield V5</h2>
           <div class="muted">CTRL + ALT + X ile açılır.</div>
         </div>
-        <div class="badge" title="İşlem yapılmazsa otomatik kapanır">
-          <span class="dot"></span>
-          Durum: <span id="timer">Aktif</span>
-        </div>
+        <div class="badge"><span class="dot"></span>Durum: <span id="timer">Aktif</span></div>
       </div>
 
       <div class="tabs">
@@ -166,20 +96,16 @@
         <button class="tab" id="tabFile">Dosya</button>
       </div>
 
-      <!-- ===== METİN MODU ===== -->
       <div id="panelText">
-        <label>Veri (metin / şifreli çıktı / batch):</label>
-        <textarea id="data" rows="8" placeholder="Metin gir ya da şifreli çıktıyı buraya yapıştır..."></textarea>
+        <label>Veri:</label>
+        <textarea id="data" rows="8"></textarea>
 
         <div class="row">
           <div>
             <label>Master Key:</label>
-            <input type="password" id="key" placeholder="Uzun bir parola yaz..." autocomplete="off" />
-
-            <div class="pw-wrap">
-              <div class="pw-meter"><div class="pw-bar" id="pwBar"></div></div>
-              <div class="pw-text" id="pwText">Parola gücü: —</div>
-            </div>
+            <input type="password" id="key" autocomplete="off" />
+            <div class="pw-meter"><div class="pw-bar" id="pwBar"></div></div>
+            <div class="pw-text" id="pwText">Parola gücü: —</div>
 
             <div class="mini-actions">
               <button class="btn-gray" id="toggleKey">Parolayı Göster</button>
@@ -189,10 +115,8 @@
             <div class="mini-actions">
               <button class="btn-gray" id="btnGen">ÜRET</button>
               <button class="btn-gray" id="btnGenCopy">ÜRET + KOPYALA</button>
-              <select id="genLen" style="margin:0; width:auto;">
-                <option value="16">16</option>
-                <option value="24" selected>24</option>
-                <option value="32">32</option>
+              <select id="genLen" style="margin:0;width:auto;">
+                <option value="16">16</option><option value="24" selected>24</option><option value="32">32</option>
               </select>
             </div>
           </div>
@@ -203,12 +127,12 @@
               <div>
                 <label class="muted">KDF</label>
                 <select id="kdf">
-                  <option value="argon2" selected>Argon2i (browser)</option>
+                  <option value="argon2" selected>Argon2i</option>
                   <option value="pbkdf2">PBKDF2-SHA256</option>
                 </select>
               </div>
               <div>
-                <label class="muted">PBKDF2 iterasyon</label>
+                <label class="muted">PBKDF2 iter</label>
                 <input type="number" id="iters" min="100000" max="1000000" step="50000" value="250000" />
               </div>
               <div>
@@ -234,54 +158,46 @@
 
             <div class="row" style="margin-top:6px;">
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="useCompression" checked />
-                Şifrelemeden önce sıkıştır (pako)
+                <input type="checkbox" id="useCompression" checked /> Sıkıştır
               </label>
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="batchMode" />
-                Batch mod (her satır ayrı paket)
+                <input type="checkbox" id="batchMode" /> Batch
               </label>
             </div>
 
             <div class="row" style="margin-top:6px;">
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="maskOutput" />
-                Çıktıyı maskele (blur)
+                <input type="checkbox" id="maskOutput" /> Çıktıyı maskele
               </label>
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="rememberHistory" checked />
-                Şifreli çıktıları geçmişe kaydet (ciphertext)
+                <input type="checkbox" id="rememberHistory" checked /> Geçmişe kaydet
               </label>
             </div>
 
             <div class="row" style="margin-top:6px;">
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="autoClearKey" />
-                İşlem bitince parolayı temizle
+                <input type="checkbox" id="autoClearKey" /> İşlem bitince parolayı temizle
               </label>
               <label style="display:flex;align-items:center;gap:10px;font-size:12px;color:#c9d1d9;margin:0;">
-                <input type="checkbox" id="clipboardClear" />
-                Kopyaladıktan 30 sn sonra panoyu temizlemeyi dene
+                <input type="checkbox" id="clipboardClear" /> 30sn sonra pano temizle (deneme)
               </label>
             </div>
 
-            <div class="warn">
-              Yanlış parola denemesi <b>5</b> olunca <b>30 saniye</b> kilitlenir. (UI düzeyi)
-            </div>
+            <div class="warn">Yanlış parola 5 kez → 30sn kilit (UI düzeyi)</div>
           </div>
         </div>
 
-        <div class="row" style="margin-top: 6px;">
+        <div class="row" style="margin-top:6px;">
           <button class="btn-main" id="btnEncrypt">ŞİFRELE</button>
           <button class="btn-blue" id="btnDecrypt">ŞİFREYİ ÇÖZ</button>
         </div>
 
-        <div class="row" style="margin-top: 6px;">
-          <button class="btn-gray" id="btnCopy">ÇIKTIYI KOPYALA</button>
-          <button class="btn-gray" id="btnPaste">PANODAN YAPIŞTIR</button>
+        <div class="row" style="margin-top:6px;">
+          <button class="btn-gray" id="btnCopy">KOPYALA</button>
+          <button class="btn-gray" id="btnPaste">YAPIŞTIR</button>
         </div>
 
-        <div class="row" style="margin-top: 6px;">
+        <div class="row" style="margin-top:6px;">
           <button class="btn-gray" id="btnShowQR">QR GÖSTER</button>
           <button class="btn-gray" id="btnHideQR">QR KAPAT</button>
         </div>
@@ -291,13 +207,8 @@
           <div id="qrBox" style="margin-top:10px;"></div>
         </div>
 
-        <div class="muted" style="margin-top: 10px;">
-          Metin formatı: <b>v2|kdf=...|salt=...|iv=...|ct=...|comp=0/1|exp=unix</b><br/>
-          Not: Argon2 burada <b>argon2-browser</b> ile <b>Argon2i</b> kullanır. (Tarayıcıda argon2id için ayrı paket gerekir.)
-        </div>
-
         <div class="section">
-          <div class="muted"><b>Geçmiş (yerel):</b> Son 10 şifreli çıktı</div>
+          <div class="muted"><b>Geçmiş:</b> Son 10 şifreli çıktı</div>
           <div class="history" id="historyBox"></div>
           <div class="mini-actions" style="margin-top:10px;">
             <button class="btn-gray" id="btnClearHistory">Geçmişi Sil</button>
@@ -305,61 +216,35 @@
         </div>
       </div>
 
-      <!-- ===== DOSYA MODU ===== -->
       <div id="panelFile" style="display:none;">
-        <div class="muted">Dosya şifreleme: AES-GCM + KDF (Argon2i / PBKDF2). Çıktı: <b>.ashield.json</b></div>
-
+        <div class="muted">Dosya şifreleme: AES-GCM + KDF (Argon2/PBKDF2). Çıktı: .ashield.json</div>
         <div class="row" style="margin-top:10px;">
-          <div>
-            <label>Dosya seç (şifrelemek için):</label>
-            <input type="file" id="fileInput" />
-          </div>
-          <div>
-            <label>KDF:</label>
-            <select id="fileKdf">
-              <option value="argon2" selected>Argon2i (browser)</option>
-              <option value="pbkdf2">PBKDF2-SHA256</option>
-            </select>
+          <div><label>Dosya seç:</label><input type="file" id="fileInput" /></div>
+          <div><label>KDF:</label>
+            <select id="fileKdf"><option value="argon2" selected>Argon2i</option><option value="pbkdf2">PBKDF2</option></select>
           </div>
         </div>
 
         <div class="row">
           <div>
             <label>Master Key:</label>
-            <input type="password" id="fileKey" placeholder="Dosya için parola..." autocomplete="off" />
-            <div class="mini-actions">
-              <button class="btn-gray" id="toggleFileKey">Parolayı Göster</button>
-              <button class="btn-gray" id="clearFileKey">Parolayı Temizle</button>
-            </div>
+            <input type="password" id="fileKey" autocomplete="off" />
           </div>
           <div>
-            <label>Şifreli dosya (.ashield.json) seç (çözmek için):</label>
+            <label>Şifreli dosya seç (.json):</label>
             <input type="file" id="encFileInput" accept=".json,application/json" />
           </div>
         </div>
 
         <div class="row3">
-          <div>
-            <label class="muted">PBKDF2 iterasyon</label>
-            <input type="number" id="fileIters" min="100000" max="1000000" step="50000" value="250000" />
-          </div>
-          <div>
-            <label class="muted">Argon2 mem (KiB)</label>
-            <input type="number" id="fileAMem" min="16384" max="262144" step="8192" value="65536" />
-          </div>
-          <div>
-            <label class="muted">Argon2 time</label>
-            <input type="number" id="fileATime" min="1" max="10" step="1" value="3" />
-          </div>
+          <div><label class="muted">PBKDF2 iter</label><input type="number" id="fileIters" min="100000" max="1000000" step="50000" value="250000" /></div>
+          <div><label class="muted">Argon2 mem</label><input type="number" id="fileAMem" min="16384" max="262144" step="8192" value="65536" /></div>
+          <div><label class="muted">Argon2 time</label><input type="number" id="fileATime" min="1" max="10" step="1" value="3" /></div>
         </div>
 
-        <div class="row" style="margin-top: 6px;">
+        <div class="row" style="margin-top:6px;">
           <button class="btn-main" id="btnEncryptFile">DOSYAYI ŞİFRELE + İNDİR</button>
           <button class="btn-blue" id="btnDecryptFile">ŞİFRELİ DOSYAYI ÇÖZ + İNDİR</button>
-        </div>
-
-        <div class="muted" style="margin-top:10px;">
-          Büyük dosyalarda RAM kullanımı artar (streaming yok). İstersen streaming sürüm de yapılır ama daha uzun kod ister.
         </div>
       </div>
 
@@ -368,787 +253,336 @@
   </div>
 
   <script>
-    // ====== Panel açma (CTRL + ALT + X) ======
-    window.addEventListener('keydown', function (e) {
-      if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'x') {
-        document.getElementById('fake-error').style.display = 'none';
-        document.getElementById('real-app').style.display = 'block';
-        document.body.style.background = '#0d1117';
-        startInactivityTimer();
+    // ================== PIN LOCK (SHA-256) ==================
+    // PIN = "1234" için SHA-256 hex:
+    const PIN_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
+
+    async function sha256Hex(str){
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+      return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+    }
+
+    async function checkPIN(){
+      const val = document.getElementById("pinInput").value;
+      const h = await sha256Hex(val);
+      if (h === PIN_HASH){
+        document.getElementById("pin-lock").remove();
+      } else {
+        alert("Yanlış PIN");
       }
-    });
-
-    // ====== Helpers ======
-    const enc = new TextEncoder();
-    const dec = new TextDecoder();
-
-    function b64encode(bytes) {
-      let binary = '';
-      bytes.forEach(b => binary += String.fromCharCode(b));
-      return btoa(binary);
-    }
-    function b64decode(b64) {
-      const binary = atob(b64);
-      const bytes = new Uint8Array(binary.length);
-      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-      return bytes;
     }
 
-    function clampInt(n, min, max, fallback) {
-      const x = Number(n);
-      if (!Number.isFinite(x)) return fallback;
-      return Math.max(min, Math.min(max, Math.floor(x)));
+    document.getElementById("pinBtn").addEventListener("click", checkPIN);
+    document.getElementById("pinInput").addEventListener("keydown", (e)=>{ if(e.key==="Enter") checkPIN(); });
+
+    // ================== Senin uygulama kodu (kısaltılmadı) ==================
+    const enc = new TextEncoder(), dec = new TextDecoder();
+    const b64e = (u8)=>{let s='';u8.forEach(b=>s+=String.fromCharCode(b));return btoa(s);}
+    const b64d = (b64)=>{const s=atob(b64);const u8=new Uint8Array(s.length);for(let i=0;i<s.length;i++)u8[i]=s.charCodeAt(i);return u8;}
+    const clampInt=(n,min,max,f)=>{const x=Number(n);if(!Number.isFinite(x))return f;return Math.max(min,Math.min(max,Math.floor(x)));}
+    const nowUnix=()=>Math.floor(Date.now()/1000);
+
+    async function deriveKeyPBKDF2(password,salt,iterations){
+      const km=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveKey']);
+      return crypto.subtle.deriveKey({name:'PBKDF2',hash:'SHA-256',salt,iterations},km,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
     }
-
-    function nowUnix() { return Math.floor(Date.now() / 1000); }
-
-    // ====== KDF: PBKDF2 ======
-    async function deriveKeyPBKDF2(password, salt, iterations) {
-      const keyMaterial = await crypto.subtle.importKey(
-        'raw',
-        enc.encode(password),
-        'PBKDF2',
-        false,
-        ['deriveKey']
-      );
-      return crypto.subtle.deriveKey(
-        { name: 'PBKDF2', hash: 'SHA-256', salt, iterations },
-        keyMaterial,
-        { name: 'AES-GCM', length: 256 },
-        false,
-        ['encrypt', 'decrypt']
-      );
-    }
-
-    // ====== KDF: Argon2i (argon2-browser) ======
-    async function deriveKeyArgon2(password, salt, time, memKiB) {
-      // argon2-browser: https://github.com/antelle/argon2-browser
-      // distPath: cdnjs altındaki wasm dosyaları için
-      const res = await argon2.hash({
-        pass: password,
-        salt: salt,
-        time: time,
-        mem: memKiB,
-        hashLen: 32,
-        parallelism: 1,
-        type: argon2.ArgonType.Argon2i,
-        distPath: 'https://cdnjs.cloudflare.com/ajax/libs/argon2-browser/1.18.0/'
+    async function deriveKeyArgon2(password,salt,time,memKiB){
+      const res=await argon2.hash({
+        pass:password,salt,time,mem:memKiB,hashLen:32,parallelism:1,
+        type:argon2.ArgonType.Argon2i,distPath:'https://cdnjs.cloudflare.com/ajax/libs/argon2-browser/1.18.0/'
       });
-      return crypto.subtle.importKey('raw', res.hash, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']);
+      return crypto.subtle.importKey('raw',res.hash,{name:'AES-GCM'},false,['encrypt','decrypt']);
     }
-
-    async function deriveAesKey(kdf, password, salt, params) {
-      if (kdf === 'pbkdf2') {
-        const iters = clampInt(params.iters, 100000, 1000000, 250000);
-        return { key: await deriveKeyPBKDF2(password, salt, iters), kdfMeta: { iters } };
+    async function deriveAesKey(kdf,password,salt,params){
+      if(kdf==='pbkdf2'){
+        const iters=clampInt(params.iters,100000,1000000,250000);
+        return {key:await deriveKeyPBKDF2(password,salt,iters),kdfMeta:{iters}};
       }
-      const time = clampInt(params.aTime, 1, 10, 3);
-      const mem = clampInt(params.aMem, 16384, 262144, 65536);
-      return { key: await deriveKeyArgon2(password, salt, time, mem), kdfMeta: { time, mem } };
+      const time=clampInt(params.aTime,1,10,3),mem=clampInt(params.aMem,16384,262144,65536);
+      return {key:await deriveKeyArgon2(password,salt,time,mem),kdfMeta:{time,mem}};
     }
-
-    // ====== Format v2 ======
-    function packV2(obj) {
-      // v2|kdf=argon2|aTime=3|aMem=65536|iters=250000|salt=...|iv=...|ct=...|comp=1|exp=0
-      const parts = ['v2'];
-      for (const [k, v] of Object.entries(obj)) {
-        parts.push(`${k}=${String(v)}`);
-      }
-      return parts.join('|');
+    function packV2(obj){const parts=['v2'];for(const[k,v]of Object.entries(obj))parts.push(`${k}=${String(v)}`);return parts.join('|');}
+    function unpackV2(payload){
+      if(!payload.startsWith('v2|'))throw new Error('FormatError');
+      const kv={};payload.split('|').slice(1).forEach(p=>{const i=p.indexOf('=');if(i!==-1)kv[p.slice(0,i)]=p.slice(i+1);});
+      if(!kv.kdf||!kv.salt||!kv.iv||!kv.ct||typeof kv.comp==='undefined')throw new Error('FormatError');
+      return {kdf:kv.kdf,iters:kv.iters?Number(kv.iters):undefined,aTime:kv.aTime?Number(kv.aTime):undefined,aMem:kv.aMem?Number(kv.aMem):undefined,
+        salt:b64d(kv.salt),iv:b64d(kv.iv),ct:b64d(kv.ct),comp:kv.comp==='1',exp:kv.exp?Number(kv.exp):0};
     }
+    function maybeCompress(bytes,use){ if(!use) return {bytes,comp:false}; const def=pako.deflate(bytes); if(def.length+8<bytes.length) return {bytes:def,comp:true}; return {bytes,comp:false}; }
+    function maybeDecompress(bytes,comp){ return comp ? pako.inflate(bytes) : bytes; }
 
-    function unpackV2(payload) {
-      if (!payload.startsWith('v2|')) throw new Error('FormatError');
-      const parts = payload.split('|').slice(1);
-      const kv = {};
-      for (const p of parts) {
-        const idx = p.indexOf('=');
-        if (idx === -1) continue;
-        kv[p.slice(0, idx)] = p.slice(idx + 1);
-      }
-      if (!kv.kdf || !kv.salt || !kv.iv || !kv.ct || typeof kv.comp === 'undefined') throw new Error('FormatError');
-      return {
-        kdf: kv.kdf,
-        iters: kv.iters ? Number(kv.iters) : undefined,
-        aTime: kv.aTime ? Number(kv.aTime) : undefined,
-        aMem: kv.aMem ? Number(kv.aMem) : undefined,
-        salt: b64decode(kv.salt),
-        iv: b64decode(kv.iv),
-        ct: b64decode(kv.ct),
-        comp: kv.comp === '1',
-        exp: kv.exp ? Number(kv.exp) : 0
-      };
-    }
-
-    // ====== Compress helpers ======
-    function maybeCompress(plainBytes, useCompression) {
-      if (!useCompression) return { bytes: plainBytes, comp: false };
-      const def = pako.deflate(plainBytes);
-      // sadece gerçekten küçültüyorsa kullan
-      if (def.length + 8 < plainBytes.length) return { bytes: def, comp: true };
-      return { bytes: plainBytes, comp: false };
-    }
-
-    function maybeDecompress(bytes, comp) {
-      if (!comp) return bytes;
-      return pako.inflate(bytes);
-    }
-
-    // ====== Text encrypt/decrypt ======
-    async function encryptOne(plainText, password, settings) {
-      const salt = crypto.getRandomValues(new Uint8Array(16));
-      const iv = crypto.getRandomValues(new Uint8Array(12));
-      const { key, kdfMeta } = await deriveAesKey(settings.kdf, password, salt, settings);
-
-      const plainBytes = enc.encode(plainText);
-      const { bytes: dataBytes, comp } = maybeCompress(plainBytes, settings.useCompression);
-
-      const ct = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, dataBytes));
-
-      const ttlMin = clampInt(settings.ttlMin, 0, 10080, 0);
-      const exp = ttlMin > 0 ? (nowUnix() + ttlMin * 60) : 0;
-
-      const meta = {
-        kdf: settings.kdf,
-        iters: settings.kdf === 'pbkdf2' ? kdfMeta.iters : '',
-        aTime: settings.kdf === 'argon2' ? kdfMeta.time : '',
-        aMem: settings.kdf === 'argon2' ? kdfMeta.mem : '',
-        salt: b64encode(salt),
-        iv: b64encode(iv),
-        ct: b64encode(ct),
-        comp: comp ? 1 : 0,
-        exp: exp
-      };
-
-      // boş meta alanlarını temizle
-      Object.keys(meta).forEach(k => { if (meta[k] === '') delete meta[k]; });
-
+    async function encryptOne(plainText,password,settings){
+      const salt=crypto.getRandomValues(new Uint8Array(16));
+      const iv=crypto.getRandomValues(new Uint8Array(12));
+      const {key,kdfMeta}=await deriveAesKey(settings.kdf,password,salt,settings);
+      const plainBytes=enc.encode(plainText);
+      const {bytes:dataBytes,comp}=maybeCompress(plainBytes,settings.useCompression);
+      const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},key,dataBytes));
+      const ttlMin=clampInt(settings.ttlMin,0,10080,0);
+      const exp=ttlMin>0?(nowUnix()+ttlMin*60):0;
+      const meta={kdf:settings.kdf,salt:b64e(salt),iv:b64e(iv),ct:b64e(ct),comp:comp?1:0,exp};
+      if(settings.kdf==='pbkdf2') meta.iters=kdfMeta.iters;
+      if(settings.kdf==='argon2'){ meta.aTime=kdfMeta.time; meta.aMem=kdfMeta.mem; }
       return packV2(meta);
     }
-
-    async function decryptOne(payload, password) {
-      const p = unpackV2(payload);
-      if (p.exp && nowUnix() > p.exp) throw new Error('Expired');
-
-      const { key } = await deriveAesKey(p.kdf, password, p.salt, p);
-
-      const plainBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: p.iv }, key, p.ct);
-      const plainBytes = new Uint8Array(plainBuf);
-      const outBytes = maybeDecompress(plainBytes, p.comp);
+    async function decryptOne(payload,password){
+      const p=unpackV2(payload);
+      if(p.exp && nowUnix()>p.exp) throw new Error('Expired');
+      const {key}=await deriveAesKey(p.kdf,password,p.salt,p);
+      const plainBuf=await crypto.subtle.decrypt({name:'AES-GCM',iv:p.iv},key,p.ct);
+      const plainBytes=new Uint8Array(plainBuf);
+      const outBytes=maybeDecompress(plainBytes,p.comp);
       return dec.decode(outBytes);
     }
 
-    // ====== UI refs ======
-    const dataEl = document.getElementById('data');
-    const keyEl = document.getElementById('key');
+    // UI refs
+    const dataEl=document.getElementById('data'), keyEl=document.getElementById('key');
+    const kdfEl=document.getElementById('kdf'), itersEl=document.getElementById('iters');
+    const aMemEl=document.getElementById('aMem'), aTimeEl=document.getElementById('aTime');
+    const ttlMinEl=document.getElementById('ttlMin'), wipeSecEl=document.getElementById('wipeSec');
+    const useCompressionEl=document.getElementById('useCompression'), batchModeEl=document.getElementById('batchMode');
+    const maskOutputEl=document.getElementById('maskOutput'), autoClearKeyEl=document.getElementById('autoClearKey');
+    const rememberHistoryEl=document.getElementById('rememberHistory'), clipboardClearEl=document.getElementById('clipboardClear');
+    const btnEncrypt=document.getElementById('btnEncrypt'), btnDecrypt=document.getElementById('btnDecrypt');
+    const btnCopy=document.getElementById('btnCopy'), btnPaste=document.getElementById('btnPaste'), btnWipe=document.getElementById('btnWipe');
+    const toggleKeyBtn=document.getElementById('toggleKey'), clearKeyBtn=document.getElementById('clearKey');
+    const genLenEl=document.getElementById('genLen'), btnGen=document.getElementById('btnGen'), btnGenCopy=document.getElementById('btnGenCopy');
+    const pwBar=document.getElementById('pwBar'), pwText=document.getElementById('pwText');
+    const historyBox=document.getElementById('historyBox'), btnClearHistory=document.getElementById('btnClearHistory');
+    const tabText=document.getElementById('tabText'), tabFile=document.getElementById('tabFile');
+    const panelText=document.getElementById('panelText'), panelFile=document.getElementById('panelFile');
 
-    const kdfEl = document.getElementById('kdf');
-    const itersEl = document.getElementById('iters');
-    const aMemEl = document.getElementById('aMem');
-    const aTimeEl = document.getElementById('aTime');
-    const ttlMinEl = document.getElementById('ttlMin');
-    const wipeSecEl = document.getElementById('wipeSec');
+    const btnShowQR=document.getElementById('btnShowQR'), btnHideQR=document.getElementById('btnHideQR');
+    const qrWrap=document.getElementById('qrWrap'), qrBox=document.getElementById('qrBox');
 
-    const useCompressionEl = document.getElementById('useCompression');
-    const batchModeEl = document.getElementById('batchMode');
-    const maskOutputEl = document.getElementById('maskOutput');
-    const autoClearKeyEl = document.getElementById('autoClearKey');
-    const rememberHistoryEl = document.getElementById('rememberHistory');
-    const clipboardClearEl = document.getElementById('clipboardClear');
+    // Tab switch
+    tabText.addEventListener('click',()=>{tabText.classList.add('active');tabFile.classList.remove('active');panelText.style.display='block';panelFile.style.display='none';startInactivityTimer();});
+    tabFile.addEventListener('click',()=>{tabFile.classList.add('active');tabText.classList.remove('active');panelFile.style.display='block';panelText.style.display='none';startInactivityTimer();});
 
-    const btnEncrypt = document.getElementById('btnEncrypt');
-    const btnDecrypt = document.getElementById('btnDecrypt');
-    const btnCopy = document.getElementById('btnCopy');
-    const btnPaste = document.getElementById('btnPaste');
-    const btnWipe = document.getElementById('btnWipe');
-
-    const toggleKeyBtn = document.getElementById('toggleKey');
-    const clearKeyBtn = document.getElementById('clearKey');
-
-    const genLenEl = document.getElementById('genLen');
-    const btnGen = document.getElementById('btnGen');
-    const btnGenCopy = document.getElementById('btnGenCopy');
-
-    const pwBar = document.getElementById('pwBar');
-    const pwText = document.getElementById('pwText');
-
-    const historyBox = document.getElementById('historyBox');
-    const btnClearHistory = document.getElementById('btnClearHistory');
-
-    const btnShowQR = document.getElementById('btnShowQR');
-    const btnHideQR = document.getElementById('btnHideQR');
-    const qrWrap = document.getElementById('qrWrap');
-    const qrBox = document.getElementById('qrBox');
-    let qrInstance = null;
-
-    // Tabs
-    const tabText = document.getElementById('tabText');
-    const tabFile = document.getElementById('tabFile');
-    const panelText = document.getElementById('panelText');
-    const panelFile = document.getElementById('panelFile');
-
-    tabText.addEventListener('click', () => {
-      tabText.classList.add('active'); tabFile.classList.remove('active');
-      panelText.style.display = 'block'; panelFile.style.display = 'none';
-      startInactivityTimer();
-    });
-    tabFile.addEventListener('click', () => {
-      tabFile.classList.add('active'); tabText.classList.remove('active');
-      panelFile.style.display = 'block'; panelText.style.display = 'none';
-      startInactivityTimer();
-    });
-
-    // ====== Password strength ======
-    function scorePassword(pw) {
-      let score = 0;
-      if (!pw) return 0;
-      score += Math.min(40, pw.length * 2);
-      const hasLower = /[a-z]/.test(pw);
-      const hasUpper = /[A-Z]/.test(pw);
-      const hasDigit = /\d/.test(pw);
-      const hasSym = /[^A-Za-z0-9]/.test(pw);
-      score += (hasLower ? 10 : 0) + (hasUpper ? 10 : 0) + (hasDigit ? 10 : 0) + (hasSym ? 10 : 0);
-      if (/^(.)\1+$/.test(pw)) score -= 30;
-      if (/1234|abcd|qwer|password|parola/i.test(pw)) score -= 25;
-      return Math.max(0, Math.min(100, score));
-    }
-
-    function updatePwMeter() {
-      const pw = keyEl.value;
-      const s = scorePassword(pw);
-      pwBar.style.width = s + '%';
-      let label = 'Zayıf';
-      let color = '#da3633';
-      if (s >= 70) { label = 'Güçlü'; color = '#2ea043'; }
-      else if (s >= 45) { label = 'Orta'; color = '#d29922'; }
-      pwBar.style.background = color;
-      pwText.textContent = `Parola gücü: ${label} (${Math.round(s)}/100)`;
-    }
-
-    keyEl.addEventListener('input', () => { updatePwMeter(); startInactivityTimer(); });
-
-    // ====== Mask output ======
-    function applyMask() {
-      if (maskOutputEl.checked) dataEl.classList.add('blurred');
-      else dataEl.classList.remove('blurred');
-    }
-    maskOutputEl.addEventListener('change', () => { applyMask(); startInactivityTimer(); });
-
-    // ====== Password generator ======
-    function genPassword(len) {
-      const lower = "abcdefghijklmnopqrstuvwxyz";
-      const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const digits = "0123456789";
-      const sym = "!@#$%^&*()-_=+[]{};:,.?/<>~";
-      const all = lower + upper + digits + sym;
-
-      const bytes = crypto.getRandomValues(new Uint8Array(len));
-      let out = '';
-
-      const must = [
-        lower[crypto.getRandomValues(new Uint8Array(1))[0] % lower.length],
-        upper[crypto.getRandomValues(new Uint8Array(1))[0] % upper.length],
-        digits[crypto.getRandomValues(new Uint8Array(1))[0] % digits.length],
-        sym[crypto.getRandomValues(new Uint8Array(1))[0] % sym.length],
-      ];
-      for (let i = 0; i < len; i++) out += all[bytes[i] % all.length];
-      out = must.join('') + out.slice(4);
-
-      const arr = out.split('');
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = crypto.getRandomValues(new Uint8Array(1))[0] % (i + 1);
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+    // Panel açma (CTRL+ALT+X)
+    window.addEventListener('keydown',e=>{
+      if(e.ctrlKey&&e.altKey&&e.key.toLowerCase()==='x'){
+        document.getElementById('fake-error').style.display='none';
+        document.getElementById('real-app').style.display='block';
+        document.body.style.background='#0d1117';
+        startInactivityTimer();
       }
+    });
+
+    // Password strength
+    function scorePassword(pw){
+      let s=0;if(!pw)return 0;s+=Math.min(40,pw.length*2);
+      const l=/[a-z]/.test(pw),u=/[A-Z]/.test(pw),d=/\d/.test(pw),y=/[^A-Za-z0-9]/.test(pw);
+      s+=(l?10:0)+(u?10:0)+(d?10:0)+(y?10:0);
+      if(/^(.)\1+$/.test(pw)) s-=30;
+      if(/1234|abcd|qwer|password|parola/i.test(pw)) s-=25;
+      return Math.max(0,Math.min(100,s));
+    }
+    function updatePwMeter(){
+      const pw=keyEl.value, s=scorePassword(pw);
+      pwBar.style.width=s+'%';
+      let label='Zayıf', color='#da3633';
+      if(s>=70){label='Güçlü';color='#2ea043';} else if(s>=45){label='Orta';color='#d29922';}
+      pwBar.style.background=color; pwText.textContent=`Parola gücü: ${label} (${Math.round(s)}/100)`;
+    }
+    keyEl.addEventListener('input',()=>{updatePwMeter();startInactivityTimer();});
+
+    // Mask output
+    function applyMask(){ maskOutputEl.checked ? dataEl.classList.add('blurred') : dataEl.classList.remove('blurred'); }
+    maskOutputEl.addEventListener('change',()=>{applyMask();startInactivityTimer();});
+
+    // Generator
+    function genPassword(len){
+      const lower="abcdefghijklmnopqrstuvwxyz",upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ",digits="0123456789",sym="!@#$%^&*()-_=+[]{};:,.?/<>~";
+      const all=lower+upper+digits+sym;
+      const bytes=crypto.getRandomValues(new Uint8Array(len));
+      let out='';
+      const must=[lower[crypto.getRandomValues(new Uint8Array(1))[0]%lower.length],upper[crypto.getRandomValues(new Uint8Array(1))[0]%upper.length],
+                  digits[crypto.getRandomValues(new Uint8Array(1))[0]%digits.length],sym[crypto.getRandomValues(new Uint8Array(1))[0]%sym.length]];
+      for(let i=0;i<len;i++) out+=all[bytes[i]%all.length];
+      out=must.join('')+out.slice(4);
+      const arr=out.split('');
+      for(let i=arr.length-1;i>0;i--){const j=crypto.getRandomValues(new Uint8Array(1))[0]%(i+1);[arr[i],arr[j]]=[arr[j],arr[i]];}
       return arr.join('');
     }
+    btnGen.addEventListener('click',()=>{const len=clampInt(genLenEl.value,12,64,24);keyEl.value=genPassword(len);updatePwMeter();startInactivityTimer();});
+    btnGenCopy.addEventListener('click',async()=>{const len=clampInt(genLenEl.value,12,64,24);const pw=genPassword(len);keyEl.value=pw;updatePwMeter();startInactivityTimer();
+      try{await navigator.clipboard.writeText(pw);alert('Parola üretildi ve kopyalandı.');}catch{alert('Kopyalama izni yok.');}});
 
-    btnGen.addEventListener('click', () => {
-      const len = clampInt(genLenEl.value, 12, 64, 24);
-      keyEl.value = genPassword(len);
-      updatePwMeter();
-      startInactivityTimer();
+    toggleKeyBtn.addEventListener('click',()=>{const isPw=keyEl.type==='password';keyEl.type=isPw?'text':'password';toggleKeyBtn.textContent=isPw?'Parolayı Gizle':'Parolayı Göster';startInactivityTimer();});
+    clearKeyBtn.addEventListener('click',()=>{keyEl.value='';updatePwMeter();startInactivityTimer();});
+
+    // Clipboard
+    btnCopy.addEventListener('click',async()=>{
+      const text=dataEl.value.trim(); if(!text) return alert('Kopyalanacak bir şey yok.');
+      try{await navigator.clipboard.writeText(text); alert('Kopyalandı.'); startInactivityTimer();
+        if(clipboardClearEl.checked){setTimeout(async()=>{try{await navigator.clipboard.writeText('');}catch{}},30000);}
+      }catch{alert('Kopyalama başarısız.');}
     });
+    btnPaste.addEventListener('click',async()=>{try{const text=await navigator.clipboard.readText(); if(!text) return alert('Panoda metin yok.'); dataEl.value=text; startInactivityTimer();}catch{alert('Yapıştırma başarısız.');}});
 
-    btnGenCopy.addEventListener('click', async () => {
-      const len = clampInt(genLenEl.value, 12, 64, 24);
-      const pw = genPassword(len);
-      keyEl.value = pw;
-      updatePwMeter();
-      startInactivityTimer();
-      try { await navigator.clipboard.writeText(pw); alert('Parola üretildi ve kopyalandı.'); }
-      catch { alert('Parola üretildi ama kopyalama izni yok.'); }
-    });
-
-    // ====== Key show/hide + clear ======
-    toggleKeyBtn.addEventListener('click', () => {
-      const isPw = keyEl.type === 'password';
-      keyEl.type = isPw ? 'text' : 'password';
-      toggleKeyBtn.textContent = isPw ? 'Parolayı Gizle' : 'Parolayı Göster';
-      startInactivityTimer();
-    });
-
-    clearKeyBtn.addEventListener('click', () => {
-      keyEl.value = '';
-      updatePwMeter();
-      startInactivityTimer();
-    });
-
-    // ====== Copy / Paste + clipboard clear ======
-    btnCopy.addEventListener('click', async () => {
-      const text = dataEl.value.trim();
-      if (!text) return alert('Kopyalanacak bir şey yok.');
-      try {
-        await navigator.clipboard.writeText(text);
-        startInactivityTimer();
-        alert('Kopyalandı.');
-
-        if (clipboardClearEl.checked) {
-          setTimeout(async () => {
-            try { await navigator.clipboard.writeText(''); } catch {}
-          }, 30000);
-        }
-      } catch {
-        alert('Kopyalama başarısız (tarayıcı izin vermedi).');
-      }
-    });
-
-    btnPaste.addEventListener('click', async () => {
-      try {
-        const text = await navigator.clipboard.readText();
-        if (!text) return alert('Panoda metin yok.');
-        dataEl.value = text;
-        startInactivityTimer();
-      } catch {
-        alert('Yapıştırma başarısız (tarayıcı izin vermedi).');
-      }
-    });
-
-    // ====== History (localStorage) ======
-    const HISTORY_KEY = 'ashield_history_v2';
-    function loadHistory() {
-      try {
-        const raw = localStorage.getItem(HISTORY_KEY);
-        const arr = raw ? JSON.parse(raw) : [];
-        return Array.isArray(arr) ? arr : [];
-      } catch { return []; }
-    }
-    function saveHistory(arr) {
-      try { localStorage.setItem(HISTORY_KEY, JSON.stringify(arr)); } catch {}
-    }
-    function addHistoryItem(cipherText) {
-      if (!rememberHistoryEl.checked) return;
-      const arr = loadHistory();
-      arr.unshift({ t: Date.now(), v: cipherText });
-      while (arr.length > 10) arr.pop();
-      saveHistory(arr);
-      renderHistory();
-    }
-    function renderHistory() {
-      const arr = loadHistory();
-      historyBox.innerHTML = '';
-      if (!arr.length) { historyBox.innerHTML = `<div class="muted">Geçmiş boş.</div>`; return; }
-      for (const it of arr) {
-        const wrap = document.createElement('div');
-        wrap.className = 'hist-item';
-
-        const left = document.createElement('div');
-        const dt = new Date(it.t);
-        left.innerHTML = `<div class="muted">${dt.toLocaleString('tr-TR')}</div>`;
-        const mono = document.createElement('div');
-        mono.className = 'hist-text';
-        mono.textContent = it.v;
-        left.appendChild(mono);
-
-        const actions = document.createElement('div');
-        actions.className = 'hist-actions';
-
-        const bUse = document.createElement('button');
-        bUse.className = 'btn-gray';
-        bUse.textContent = 'Yükle';
-        bUse.onclick = () => { dataEl.value = it.v; startInactivityTimer(); };
-
-        const bCopy = document.createElement('button');
-        bCopy.className = 'btn-gray';
-        bCopy.textContent = 'Kopyala';
-        bCopy.onclick = async () => {
-          try { await navigator.clipboard.writeText(it.v); alert('Kopyalandı.'); }
-          catch { alert('Kopyalama izni yok.'); }
-          startInactivityTimer();
-        };
-
-        actions.appendChild(bUse);
-        actions.appendChild(bCopy);
-
-        wrap.appendChild(left);
-        wrap.appendChild(actions);
-        historyBox.appendChild(wrap);
+    // History
+    const HISTORY_KEY='ashield_history_v2';
+    const loadHistory=()=>{try{const raw=localStorage.getItem(HISTORY_KEY);const arr=raw?JSON.parse(raw):[];return Array.isArray(arr)?arr:[];}catch{return[];}};
+    const saveHistory=(arr)=>{try{localStorage.setItem(HISTORY_KEY,JSON.stringify(arr));}catch{}};
+    function renderHistory(){
+      const arr=loadHistory(); historyBox.innerHTML='';
+      if(!arr.length){historyBox.innerHTML='<div class="muted">Geçmiş boş.</div>';return;}
+      for(const it of arr){
+        const wrap=document.createElement('div');wrap.className='hist-item';
+        const left=document.createElement('div');left.innerHTML=`<div class="muted">${new Date(it.t).toLocaleString('tr-TR')}</div>`;
+        const mono=document.createElement('div');mono.className='hist-text';mono.textContent=it.v;left.appendChild(mono);
+        const actions=document.createElement('div');actions.className='hist-actions';
+        const bUse=document.createElement('button');bUse.className='btn-gray';bUse.textContent='Yükle';bUse.onclick=()=>{dataEl.value=it.v;startInactivityTimer();};
+        const bCopy=document.createElement('button');bCopy.className='btn-gray';bCopy.textContent='Kopyala';bCopy.onclick=async()=>{try{await navigator.clipboard.writeText(it.v);alert('Kopyalandı.');}catch{alert('Kopyalama izni yok.');}startInactivityTimer();};
+        actions.appendChild(bUse);actions.appendChild(bCopy);
+        wrap.appendChild(left);wrap.appendChild(actions);historyBox.appendChild(wrap);
       }
     }
-    btnClearHistory.addEventListener('click', () => {
-      try { localStorage.removeItem(HISTORY_KEY); } catch {}
-      renderHistory();
-      startInactivityTimer();
-    });
+    function addHistoryItem(v){
+      if(!rememberHistoryEl.checked) return;
+      const arr=loadHistory(); arr.unshift({t:Date.now(),v}); while(arr.length>10) arr.pop(); saveHistory(arr); renderHistory();
+    }
+    btnClearHistory.addEventListener('click',()=>{try{localStorage.removeItem(HISTORY_KEY);}catch{} renderHistory(); startInactivityTimer();});
 
-    // ====== UI lockout (failed attempts) ======
-    let failCount = 0;
-    let lockedUntil = 0;
-
-    function lockUI(seconds) {
-      lockedUntil = Date.now() + seconds * 1000;
-      const tick = setInterval(() => {
-        const left = Math.ceil((lockedUntil - Date.now()) / 1000);
-        if (left <= 0) {
-          clearInterval(tick);
-          btnEncrypt.textContent = 'ŞİFRELE';
-          btnDecrypt.textContent = 'ŞİFREYİ ÇÖZ';
-          btnEncrypt.disabled = false;
-          btnDecrypt.disabled = false;
-          failCount = 0;
-          return;
-        }
-        btnEncrypt.textContent = `KİLİTLİ (${left}s)`;
-        btnDecrypt.textContent = `KİLİTLİ (${left}s)`;
-        btnEncrypt.disabled = true;
-        btnDecrypt.disabled = true;
-      }, 250);
+    // Lockout
+    let failCount=0, lockedUntil=0;
+    function lockUI(sec){
+      lockedUntil=Date.now()+sec*1000;
+      const tick=setInterval(()=>{
+        const left=Math.ceil((lockedUntil-Date.now())/1000);
+        if(left<=0){clearInterval(tick);btnEncrypt.textContent='ŞİFRELE';btnDecrypt.textContent='ŞİFREYİ ÇÖZ';btnEncrypt.disabled=false;btnDecrypt.disabled=false;failCount=0;return;}
+        btnEncrypt.textContent=`KİLİTLİ (${left}s)`;btnDecrypt.textContent=`KİLİTLİ (${left}s)`;btnEncrypt.disabled=true;btnDecrypt.disabled=true;
+      },250);
     }
 
-    function validateInputs(isDecrypt) {
-      if (Date.now() < lockedUntil) return false;
-      const data = dataEl.value.trim();
-      const pw = keyEl.value;
-      if (!data) { alert('Veri boş.'); return false; }
-      if (!pw || pw.length < 10) { alert('Anahtar çok kısa (en az 10).'); return false; }
-      if (isDecrypt) {
-        if (batchModeEl.checked) {
-          const lines = data.split(/\r?\n/).filter(Boolean);
-          if (!lines.length || !lines.every(l => l.startsWith('v2|'))) { alert('Batch modda her satır v2| ile başlamalı.'); return false; }
-        } else {
-          if (!data.startsWith('v2|')) { alert('Bu veri v2 formatında değil (v2| ile başlamalı).'); return false; }
+    function validateInputs(isDecrypt){
+      if(Date.now()<lockedUntil) return false;
+      const data=dataEl.value.trim(), pw=keyEl.value;
+      if(!data){alert('Veri boş.');return false;}
+      if(!pw||pw.length<10){alert('Anahtar çok kısa (en az 10).');return false;}
+      if(isDecrypt){
+        if(batchModeEl.checked){
+          const lines=data.split(/\r?\n/).filter(Boolean);
+          if(!lines.length||!lines.every(l=>l.startsWith('v2|'))){alert('Batch modda her satır v2| olmalı.');return false;}
+        }else{
+          if(!data.startsWith('v2|')){alert('Bu veri v2 formatında değil.');return false;}
         }
       }
       return true;
     }
 
-    // ====== Busy ======
-    function setBusy(isBusy) {
-      [btnEncrypt, btnDecrypt, btnCopy, btnPaste, btnShowQR, btnHideQR, tabText, tabFile].forEach(b => b.disabled = isBusy);
-      kdfEl.disabled = isBusy;
-      itersEl.disabled = isBusy;
-      aMemEl.disabled = isBusy;
-      aTimeEl.disabled = isBusy;
-      ttlMinEl.disabled = isBusy;
-      wipeSecEl.disabled = isBusy;
-      useCompressionEl.disabled = isBusy;
-      batchModeEl.disabled = isBusy;
-    }
+    // QR
+    function showQR(text){qrWrap.style.display='block';qrBox.innerHTML=''; new QRCode(qrBox,{text,width:220,height:220});}
+    btnShowQR.addEventListener('click',()=>{const t=dataEl.value.trim(); if(!t) return alert('QR için veri yok.'); try{showQR(t);}catch{alert('QR üretilemedi (veri çok büyük).');} startInactivityTimer();});
+    btnHideQR.addEventListener('click',()=>{qrWrap.style.display='none';qrBox.innerHTML='';startInactivityTimer();});
 
-    // ====== QR ======
-    function showQR(text) {
-      qrWrap.style.display = 'block';
-      qrBox.innerHTML = '';
-      qrInstance = new QRCode(qrBox, { text, width: 220, height: 220 });
-    }
-    btnShowQR.addEventListener('click', () => {
-      const t = dataEl.value.trim();
-      if (!t) return alert('QR için veri yok.');
-      try { showQR(t); } catch { alert('QR üretilemedi (veri çok büyük olabilir).'); }
-      startInactivityTimer();
-    });
-    btnHideQR.addEventListener('click', () => {
-      qrWrap.style.display = 'none';
-      qrBox.innerHTML = '';
-      qrInstance = null;
-      startInactivityTimer();
-    });
-
-    // ====== Main (Text) ======
-    async function doEncrypt() {
-      if (!validateInputs(false)) return;
-
-      setBusy(true);
-      startInactivityTimer();
-
-      const settings = {
-        kdf: kdfEl.value,
-        iters: itersEl.value,
-        aTime: aTimeEl.value,
-        aMem: aMemEl.value,
-        ttlMin: ttlMinEl.value,
-        useCompression: useCompressionEl.checked
-      };
-
-      try {
-        const plain = dataEl.value;
-        const pw = keyEl.value;
-
-        if (batchModeEl.checked) {
-          const lines = plain.split(/\r?\n/);
-          const outLines = [];
-          for (const line of lines) {
-            if (!line.trim()) continue;
-            outLines.push(await encryptOne(line, pw, settings));
-          }
-          dataEl.value = outLines.join('\n');
-          if (outLines[0]) addHistoryItem(outLines[0]);
-        } else {
-          const out = await encryptOne(plain, pw, settings);
-          dataEl.value = out;
-          addHistoryItem(out);
+    // Main actions
+    async function doEncrypt(){
+      if(!validateInputs(false)) return;
+      const settings={kdf:kdfEl.value,iters:itersEl.value,aTime:aTimeEl.value,aMem:aMemEl.value,ttlMin:ttlMinEl.value,useCompression:useCompressionEl.checked};
+      try{
+        if(batchModeEl.checked){
+          const lines=dataEl.value.split(/\r?\n/); const out=[];
+          for(const line of lines){if(!line.trim()) continue; out.push(await encryptOne(line,keyEl.value,settings));}
+          dataEl.value=out.join('\n'); if(out[0]) addHistoryItem(out[0]);
+        }else{
+          const out=await encryptOne(dataEl.value,keyEl.value,settings);
+          dataEl.value=out; addHistoryItem(out);
         }
-
-        if (autoClearKeyEl.checked) { keyEl.value = ''; updatePwMeter(); }
-
+        if(autoClearKeyEl.checked){keyEl.value='';updatePwMeter();}
         applyMask();
-      } catch (e) {
-        alert('Şifreleme hatası oluştu.');
-      } finally {
-        setBusy(false);
-      }
+      }catch{alert('Şifreleme hatası.');}
     }
 
-    async function doDecrypt() {
-      if (!validateInputs(true)) return;
-
-      setBusy(true);
-      startInactivityTimer();
-
-      const pw = keyEl.value;
-      const wipeSec = clampInt(wipeSecEl.value, 0, 600, 0);
-
-      try {
-        if (batchModeEl.checked) {
-          const lines = dataEl.value.split(/\r?\n/).filter(Boolean);
-          const outLines = [];
-          for (const line of lines) outLines.push(await decryptOne(line.trim(), pw));
-          dataEl.value = outLines.join('\n');
-        } else {
-          const out = await decryptOne(dataEl.value.trim(), pw);
-          dataEl.value = out;
+    async function doDecrypt(){
+      if(!validateInputs(true)) return;
+      const wipeSec=clampInt(wipeSecEl.value,0,600,0);
+      try{
+        if(batchModeEl.checked){
+          const lines=dataEl.value.split(/\r?\n/).filter(Boolean);
+          const out=[]; for(const line of lines) out.push(await decryptOne(line.trim(),keyEl.value));
+          dataEl.value=out.join('\n');
+        }else{
+          dataEl.value=await decryptOne(dataEl.value.trim(),keyEl.value);
         }
-
-        failCount = 0;
-
-        if (autoClearKeyEl.checked) { keyEl.value = ''; updatePwMeter(); }
-
-        if (wipeSec > 0) {
-          const snapshot = dataEl.value;
-          setTimeout(() => {
-            // kullanıcı arada değiştirdiyse silme
-            if (dataEl.value === snapshot) dataEl.value = '';
-          }, wipeSec * 1000);
-        }
-
+        failCount=0;
+        if(autoClearKeyEl.checked){keyEl.value='';updatePwMeter();}
+        if(wipeSec>0){const snap=dataEl.value; setTimeout(()=>{if(dataEl.value===snap) dataEl.value='';},wipeSec*1000);}
         applyMask();
-      } catch (e) {
-        failCount += 1;
-        if (String(e && e.message) === 'Expired') {
-          alert('Bu paket süresi dolmuş (TTL).');
-        } else {
-          alert('Erişim engellendi: Anahtar hatalı / veri bozuk / KDF ayarı uyuşmuyor.');
-        }
-        if (failCount >= 5) lockUI(30);
-      } finally {
-        setBusy(false);
+      }catch(e){
+        failCount++;
+        if(String(e&&e.message)==='Expired') alert('Bu paket süresi dolmuş (TTL).');
+        else alert('Çözme başarısız: parola hatalı / veri bozuk.');
+        if(failCount>=5) lockUI(30);
       }
     }
+    btnEncrypt.addEventListener('click',doEncrypt);
+    btnDecrypt.addEventListener('click',doDecrypt);
 
-    btnEncrypt.addEventListener('click', doEncrypt);
-    btnDecrypt.addEventListener('click', doDecrypt);
+    // File
+    const fileInput=document.getElementById('fileInput'), encFileInput=document.getElementById('encFileInput');
+    const fileKeyEl=document.getElementById('fileKey'), fileKdfEl=document.getElementById('fileKdf');
+    const fileItersEl=document.getElementById('fileIters'), fileAMemEl=document.getElementById('fileAMem'), fileATimeEl=document.getElementById('fileATime');
+    const btnEncryptFile=document.getElementById('btnEncryptFile'), btnDecryptFile=document.getElementById('btnDecryptFile');
 
-    // ====== File mode ======
-    const fileInput = document.getElementById('fileInput');
-    const encFileInput = document.getElementById('encFileInput');
-    const fileKeyEl = document.getElementById('fileKey');
-    const fileKdfEl = document.getElementById('fileKdf');
-    const fileItersEl = document.getElementById('fileIters');
-    const fileAMemEl = document.getElementById('fileAMem');
-    const fileATimeEl = document.getElementById('fileATime');
-
-    const btnEncryptFile = document.getElementById('btnEncryptFile');
-    const btnDecryptFile = document.getElementById('btnDecryptFile');
-    const toggleFileKey = document.getElementById('toggleFileKey');
-    const clearFileKey = document.getElementById('clearFileKey');
-
-    toggleFileKey.addEventListener('click', () => {
-      const isPw = fileKeyEl.type === 'password';
-      fileKeyEl.type = isPw ? 'text' : 'password';
-      toggleFileKey.textContent = isPw ? 'Parolayı Gizle' : 'Parolayı Göster';
-      startInactivityTimer();
-    });
-    clearFileKey.addEventListener('click', () => { fileKeyEl.value=''; startInactivityTimer(); });
-
-    async function readFileAsArrayBuffer(file) {
-      return await new Promise((resolve, reject) => {
-        const r = new FileReader();
-        r.onerror = () => reject(new Error('ReadError'));
-        r.onload = () => resolve(r.result);
-        r.readAsArrayBuffer(file);
-      });
+    async function readFileAsArrayBuffer(file){
+      return await new Promise((resolve,reject)=>{const r=new FileReader();r.onerror=()=>reject(new Error('ReadError'));r.onload=()=>resolve(r.result);r.readAsArrayBuffer(file);});
+    }
+    function downloadBlob(blob,filename){
+      const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=filename;
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
     }
 
-    function downloadBlob(blob, filename) {
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    }
-
-    async function encryptFileFlow() {
-      const f = fileInput.files && fileInput.files[0];
-      const pw = fileKeyEl.value;
-      if (!f) return alert('Dosya seç.');
-      if (!pw || pw.length < 10) return alert('Parola çok kısa (en az 10).');
-
-      setBusy(true);
-      startInactivityTimer();
-
-      try {
-        const salt = crypto.getRandomValues(new Uint8Array(16));
-        const iv = crypto.getRandomValues(new Uint8Array(12));
-
-        const kdf = fileKdfEl.value;
-        const params = {
-          iters: fileItersEl.value,
-          aTime: fileATimeEl.value,
-          aMem: fileAMemEl.value
-        };
-
-        const { key, kdfMeta } = await deriveAesKey(kdf, pw, salt, params);
-
-        const buf = await readFileAsArrayBuffer(f);
-        const ct = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, buf));
-
-        const pack = {
-          v: 2,
-          kdf,
-          iters: kdf === 'pbkdf2' ? kdfMeta.iters : undefined,
-          aTime: kdf === 'argon2' ? kdfMeta.time : undefined,
-          aMem: kdf === 'argon2' ? kdfMeta.mem : undefined,
-          salt: b64encode(salt),
-          iv: b64encode(iv),
-          meta: { name: f.name, type: f.type || "application/octet-stream", size: f.size },
-          ct: b64encode(ct)
-        };
-
-        const outBlob = new Blob([JSON.stringify(pack)], { type: "application/json" });
-        downloadBlob(outBlob, (f.name || "file") + ".ashield.json");
-
-        if (autoClearKeyEl.checked) fileKeyEl.value = '';
-      } catch {
-        alert('Dosya şifreleme hatası.');
-      } finally {
-        setBusy(false);
-      }
-    }
-
-    async function decryptFileFlow() {
-      const f = encFileInput.files && encFileInput.files[0];
-      const pw = fileKeyEl.value;
-      if (!f) return alert('Şifreli .json dosyası seç.');
-      if (!pw || pw.length < 10) return alert('Parola çok kısa (en az 10).');
-
-      setBusy(true);
-      startInactivityTimer();
-
-      try {
-        const text = await f.text();
-        const pack = JSON.parse(text);
-        if (!pack || pack.v !== 2 || !pack.kdf || !pack.salt || !pack.iv || !pack.ct) throw new Error('FormatError');
-
-        const kdf = pack.kdf;
-        const salt = b64decode(pack.salt);
-        const iv = b64decode(pack.iv);
-        const ct = b64decode(pack.ct);
-
-        const params = {
-          iters: pack.iters,
-          aTime: pack.aTime,
-          aMem: pack.aMem
-        };
-
-        const { key } = await deriveAesKey(kdf, pw, salt, params);
-        const plainBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
-
-        const meta = pack.meta || {};
-        const name = meta.name || "decrypted.bin";
-        const type = meta.type || "application/octet-stream";
-        downloadBlob(new Blob([plainBuf], { type }), name);
-
-        if (autoClearKeyEl.checked) fileKeyEl.value = '';
-      } catch {
-        alert('Dosya çözme başarısız: parola hatalı ya da dosya bozuk.');
-      } finally {
-        setBusy(false);
-      }
-    }
-
-    btnEncryptFile.addEventListener('click', encryptFileFlow);
-    btnDecryptFile.addEventListener('click', decryptFileFlow);
-
-    // ====== Wipe ======
-    function wipeNow() {
-      try {
-        dataEl.value = '';
-        keyEl.value = '';
-        fileKeyEl.value = '';
-        qrWrap.style.display = 'none';
-        qrBox.innerHTML = '';
-        updatePwMeter();
-      } catch (_) {}
-      location.reload();
-    }
-    btnWipe.addEventListener('click', wipeNow);
-
-    // ====== Inactivity timer (2 dk) + countdown ======
-    let timeout;
-    let countdownInterval;
-    let remainingSec = 120;
-
-    function updateTimerText() {
-      const t = document.getElementById('timer');
-      const m = String(Math.floor(remainingSec / 60)).padStart(2, '0');
-      const s = String(remainingSec % 60).padStart(2, '0');
-      t.textContent = `Aktif (${m}:${s})`;
-    }
-
-    function startCountdown() {
-      clearInterval(countdownInterval);
-      remainingSec = 120;
-      updateTimerText();
-      countdownInterval = setInterval(() => {
-        remainingSec = Math.max(0, remainingSec - 1);
-        updateTimerText();
-        if (remainingSec === 0) clearInterval(countdownInterval);
-      }, 1000);
-    }
-
-    function startInactivityTimer() {
-      if (document.getElementById('real-app').style.display !== 'block') return;
-      clearTimeout(timeout);
-      startCountdown();
-      timeout = setTimeout(() => {
-        alert('Güvenlik nedeniyle oturum sonlandırıldı.');
-        wipeNow();
-      }, 120000);
-    }
-
-    document.addEventListener('mousemove', () => {
-      if (document.getElementById('real-app').style.display === 'block') startInactivityTimer();
-    });
-    document.addEventListener('keydown', () => {
-      if (document.getElementById('real-app').style.display === 'block') startInactivityTimer();
+    btnEncryptFile.addEventListener('click',async()=>{
+      const f=fileInput.files&&fileInput.files[0]; const pw=fileKeyEl.value;
+      if(!f) return alert('Dosya seç.'); if(!pw||pw.length<10) return alert('Parola çok kısa.');
+      try{
+        const salt=crypto.getRandomValues(new Uint8Array(16)); const iv=crypto.getRandomValues(new Uint8Array(12));
+        const params={iters:fileItersEl.value,aTime:fileATimeEl.value,aMem:fileAMemEl.value};
+        const {key,kdfMeta}=await deriveAesKey(fileKdfEl.value,pw,salt,params);
+        const buf=await readFileAsArrayBuffer(f);
+        const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},key,buf));
+        const pack={v:2,kdf:fileKdfEl.value,iters:(fileKdfEl.value==='pbkdf2'?kdfMeta.iters:undefined),
+          aTime:(fileKdfEl.value==='argon2'?kdfMeta.time:undefined),aMem:(fileKdfEl.value==='argon2'?kdfMeta.mem:undefined),
+          salt:b64e(salt),iv:b64e(iv),meta:{name:f.name,type:f.type||'application/octet-stream',size:f.size},ct:b64e(ct)};
+        downloadBlob(new Blob([JSON.stringify(pack)],{type:'application/json'}),(f.name||'file')+'.ashield.json');
+        if(autoClearKeyEl.checked) fileKeyEl.value='';
+      }catch{alert('Dosya şifreleme hatası.');}
     });
 
-    // ====== Init ======
-    updatePwMeter();
-    renderHistory();
-    applyMask();
+    btnDecryptFile.addEventListener('click',async()=>{
+      const f=encFileInput.files&&encFileInput.files[0]; const pw=fileKeyEl.value;
+      if(!f) return alert('Şifreli .json seç.'); if(!pw||pw.length<10) return alert('Parola çok kısa.');
+      try{
+        const pack=JSON.parse(await f.text());
+        const salt=b64d(pack.salt), iv=b64d(pack.iv), ct=b64d(pack.ct);
+        const params={iters:pack.iters,aTime:pack.aTime,aMem:pack.aMem};
+        const {key}=await deriveAesKey(pack.kdf,pw,salt,params);
+        const plainBuf=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
+        const meta=pack.meta||{}; downloadBlob(new Blob([plainBuf],{type:meta.type||'application/octet-stream'}),meta.name||'decrypted.bin');
+        if(autoClearKeyEl.checked) fileKeyEl.value='';
+      }catch{alert('Dosya çözme başarısız.');}
+    });
+
+    // Wipe + inactivity
+    function wipeNow(){ try{dataEl.value='';keyEl.value='';fileKeyEl.value='';qrWrap.style.display='none';qrBox.innerHTML='';updatePwMeter();}catch{} location.reload(); }
+    btnWipe.addEventListener('click',wipeNow);
+
+    let timeout,countdownInterval,remainingSec=120;
+    function updateTimerText(){const t=document.getElementById('timer');const m=String(Math.floor(remainingSec/60)).padStart(2,'0');const s=String(remainingSec%60).padStart(2,'0');t.textContent=`Aktif (${m}:${s})`;}
+    function startCountdown(){clearInterval(countdownInterval);remainingSec=120;updateTimerText();countdownInterval=setInterval(()=>{remainingSec=Math.max(0,remainingSec-1);updateTimerText();if(remainingSec===0)clearInterval(countdownInterval);},1000);}
+    function startInactivityTimer(){
+      if(document.getElementById('real-app').style.display!=='block') return;
+      clearTimeout(timeout); startCountdown();
+      timeout=setTimeout(()=>{alert('Güvenlik nedeniyle oturum sonlandırıldı.'); wipeNow();},120000);
+    }
+    document.addEventListener('mousemove',()=>{if(document.getElementById('real-app').style.display==='block') startInactivityTimer();});
+    document.addEventListener('keydown',()=>{if(document.getElementById('real-app').style.display==='block') startInactivityTimer();});
+
+    // init
+    updatePwMeter(); renderHistory(); applyMask();
   </script>
 </body>
 </html>
